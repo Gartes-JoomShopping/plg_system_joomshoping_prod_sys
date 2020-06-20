@@ -19,7 +19,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
  * @package   plg_system_joomshoping_prod_sys
  * @since     1.0.0
  */
-class plgSystemPlg_system_joomshoping_prod_sys extends CMSPlugin
+class plgSystemJoomshoping_prod_sys extends CMSPlugin
 {
 	/**
 	 * Application object
@@ -128,5 +128,30 @@ class plgSystemPlg_system_joomshoping_prod_sys extends CMSPlugin
 	public function onAfterRespond()
 	{
 
+	}
+	/**
+	 * Точка входа Ajax
+	 *
+	 * @throws Exception
+	 * @since 3.9
+	 * @author Gartes
+	 * @creationDate 2020-04-30, 16:59
+	 * @see {url : https://docs.joomla.org/Using_Joomla_Ajax_Interface/ru }
+	 */
+	public function onAjaxCountry_filter()
+	{
+		JLoader::registerNamespace( 'GNZ11', JPATH_LIBRARIES . '/GNZ11', $reset = false, $prepend = false, $type = 'psr4' );
+		JLoader::registerNamespace( 'Joomshoping_prod_sys', JPATH_PLUGINS . '/system/joomshoping_prod_sys', $reset = false, $prepend = false, $type = 'psr4' );
+		$helper = \Joomshoping_prod_sys\Helpers\Helper::instance( $this->params );
+		$task = $this->app->input->get( 'task', null, 'STRING' );
+		try
+		{
+			// Code that may throw an Exception or Error.
+			$results = $helper->$task();
+		} catch (Exception $e)
+		{
+			$results = $e;
+		}
+		return $results;
 	}
 }

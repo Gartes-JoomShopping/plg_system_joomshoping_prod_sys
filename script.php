@@ -22,6 +22,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * Constructor
 	 *
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
+	 * @since 3.9
 	 */
 	public function __construct(JAdapterInstance $adapter) {}
 
@@ -32,6 +33,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
 	 *
 	 * @return  boolean  True on success
+	 * @since 3.9
 	 */
 	public function preflight($route, JAdapterInstance $adapter) {}
 
@@ -42,6 +44,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
 	 *
 	 * @return  boolean  True on success
+	 * @since 3.9
 	 */
 	public function postflight($route, JAdapterInstance $adapter) {}
 
@@ -51,6 +54,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
 	 *
 	 * @return  boolean  True on success
+	 * @since 3.9
 	 */
 	public function install(JAdapterInstance $adapter) {}
 
@@ -60,6 +64,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
 	 *
 	 * @return  boolean  True on success
+	 * @since 3.9
 	 */
 	public function update(JAdapterInstance $adapter) {}
 
@@ -67,6 +72,7 @@ class plgSystemPlg_system_joomshoping_prod_sysInstallerScript
 	 * Called on uninstallation
 	 *
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
+	 * @since 3.9
 	 */
 	public function uninstall(JAdapterInstance $adapter) {}
 }
