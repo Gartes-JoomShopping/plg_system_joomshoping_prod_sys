@@ -25,6 +25,9 @@
 	<!-- Plugin files -->
 	<files>
 		<filename plugin="joomshoping_prod_sys">joomshoping_prod_sys.php</filename>
+		<folder>Assets</folder>
+		<folder>Helpers</folder>
+		<folder>Model</folder>
 		<folder>language</folder>
 	</files>
 
@@ -32,6 +35,29 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+				<field name="backup_time"
+					type="text"
+					default="3"
+					class="backup_time "
+					readonly=""
+					required=""
+					label="JOOMSHOPING_PROD_SYS_BACKUP_TIME"
+					description="JOOMSHOPING_PROD_SYS_BACKUP_TIME_DESC"
+					showon=""
+					filter="raw" />
+
+				<field name="limit"
+					type="text"
+					default="100"
+					class="limit "
+					readonly=""
+					required=""
+					label="JOOMSHOPING_PROD_SYS_LIMIT"
+					description="JOOMSHOPING_PROD_SYS_LIMIT_DESC"
+					showon=""
+					filter="raw" />
+
+
 				<field
 					name="sample"
 					type="text"
